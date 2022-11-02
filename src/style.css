@@ -39,8 +39,9 @@
   justify-content: space-between;
 }
 
-.form-input input {
-  border: none;
+.form-input > input {
+    height: 40px;
+    width: 250px;
 }
 
 .todo-item {
@@ -64,14 +65,16 @@
   display: flex;
   justify-content: center;
   padding: 3% 0;
-  background-color: green;
+  background-color: rgb(57, 166, 57);
   color: white;
+  font-weight: bold;
 }
 
 .clear h3 {
   font-size: 0.9rem;
   font-weight: normal;
   cursor: pointer;
+  border: none;
 }
 
 i:hover {
