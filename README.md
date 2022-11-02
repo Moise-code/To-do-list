@@ -1,75 +1,81 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+## TODO LIST WEB_APP
 
-# Project Name
-
-> Description the project.
-
+- This is a basic website that allows users to add/remove todo's from a list.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
 
-## Live Demo (if available)
+- CSS
 
-[Live Demo Link](https://livedemo.com)
+- Javascript(ES6)
 
+- WebPack
 
-## Getting Started
+- Lighthouse (An open-source, automated tool for improving the quality of web pages. It has audits for performance, accessibility, progressive web apps, SEO and more).
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+- Webhint (A customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors).
 
+- Stylelint (A mighty, modern linter that helps you avoid errors and enforce conventions in your styles).
 
-To get a local copy up and running follow these simple example steps.
+### Linter Tests
+
+- `npx hint .`
+- `npx stylelint "**/*.{css,scss}"`
+- `npx eslint .`
 
 ### Prerequisites
 
-### Setup
+- Have a local version control like Git. Which is a open source distributed version control system designed for source code management
+- A text editor (e.g Visual Studio Code, Vim, Atom & Sublime.)
+- A web browser (e.g Chrome, Safari, Mozilla Firefox.)
+- Live Server which is a web extension that helps you to live reload feature for dynamic content (PHP, Node.js, ASPNET)
+- Download waves to check project accessibilty
 
-### Install
+### Getting Started
 
-### Usage
+To get a local copy up and running follow these simple example steps.
 
-### Run tests
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-### Deployment
+### Installation
 
+1. Clone the repo by running the command
+   ```sh
+    git clone https://github.com/V-Blaze/To_Do_List
+   ```
+2. Open the directory of the project
+   ```sh
+   cd To_Do_List
+   ```
+3. Open the html file
+   ```sh
+   Click and open the html file
+   ```
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Authors
+See the [open issues](#) for a full list of proposed features (and known issues).
 
-👤 **Author1**
+## Author
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 Byiringiro Moise
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@V-blaze](https://github.com/Moise-code)
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
+- Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+- Feel free to check the [issues page](https://github.com/Moise-code/To_do_list/issues).
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+- This project is [MIT](https://github.com/V-Blaze/To_Do_List/blob/main/LICENSE) licensed.
