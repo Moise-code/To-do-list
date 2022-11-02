@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+button {
+  outline: none;
+  border: none;
+}
+
+i {
+  opacity: 0.8;
+  color: gray;
+}
+
 .main-section {
   background-color: #fff;
   border-radius: 5px;
@@ -30,18 +40,24 @@
 .form-div {
   display: flex;
   justify-content: space-between;
-  padding: 3% 0;
+  padding: 2% 0;
+  min-height: 3%;
   border-bottom: 1px solid gray;
 }
 
 .form-input {
   display: flex;
   justify-content: space-between;
+  margin-right: 3%;
 }
 
-.form-input > input {
-  height: 40px;
-  width: 250px;
+.form-input input {
+  border: none;
+  height: 2.5rem;
+}
+
+#edit-todo-item {
+  display: none;
 }
 
 .todo-item {
@@ -65,18 +81,17 @@
   display: flex;
   justify-content: center;
   padding: 3% 0;
-  background-color: rgb(57, 166, 57);
-  color: white;
-  font-weight: bold;
+  background-color: rgba(255, 255, 220);
 }
 
 .clear h3 {
   font-size: 0.9rem;
   font-weight: normal;
   cursor: pointer;
-  border: none;
 }
 
 i:hover {
   cursor: pointer;
+  color: #000;
+  opacity: 1;
 }
