@@ -64,7 +64,7 @@ See the [open issues](#) for a full list of proposed features (and known issues)
 
 👤 Byiringiro Moise
 
-- GitHub: [@V-blaze](https://github.com/Moise-code)
+- GitHub: [@Moise-code](https://github.com/Moise-code)
 
 ## 🤝 Contributing
 
@@ -78,4 +78,4 @@ See the [open issues](#) for a full list of proposed features (and known issues)
 
 ## 📝 License
 
-- This project is [MIT](https://github.com/V-Blaze/To_Do_List/blob/main/LICENSE) licensed.
+- This project is [MIT](https://github.com/Moise-code/to_do_list/blob/main/LICENSE) licensed.
