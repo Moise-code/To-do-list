@@ -81,7 +81,7 @@ i {
   display: flex;
   justify-content: center;
   padding: 3% 0;
-  background-color: rgba(255, 255, 220);
+  background-color: rgb(240, 169, 154);
 }
 
 .clear h3 {
