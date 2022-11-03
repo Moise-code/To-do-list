@@ -77,11 +77,16 @@ i {
   padding-left: 1rem;
 }
 
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
 .clear {
   display: flex;
   justify-content: center;
   padding: 3% 0;
-  background-color: rgb(240, 169, 154);
+  background-color: rgb(231, 58, 42);
 }
 
 .clear h3 {

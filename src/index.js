@@ -1,5 +1,6 @@
 import './style.css';
 import Methods from './utils.js';
+import Interactive from './interactive.js';
 
 const todoForm = document.getElementById('todo-form');
 const edittodoForm = document.getElementById('edit-todo-item');
@@ -21,4 +22,11 @@ edittodoForm.addEventListener('submit', (e) => {
   edittodoForm.style.display = 'none';
 });
 
-Methods.showTodoItems();
+document.querySelector('.clear-all').addEventListener('click', Interactive.deleteAllCompleted);
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('listUpdated', () => {
+    Interactive.addCheckEvent();
+  }, false);
+  Methods.showTodoItems();
+});

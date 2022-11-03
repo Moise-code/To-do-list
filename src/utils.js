@@ -62,6 +62,18 @@ static addBtnRemoveEvent = () => {
   }));
 };
 
+static setUpEdit = (id) => {
+  const todoList = this.getLocalStorageData();
+  const itemToEdit = todoList[id];
+
+  document.getElementById('todo-input').style.display = 'none';
+  const editInput = document.querySelector('.todo-edit-input');
+  editInput.value = itemToEdit.description;
+  editInput.setAttribute('id', id);
+  document.getElementById('edit-todo-item').style.display = 'block';
+  editInput.focus();
+}
+
 static addBtnEditEvent = () => {
   document.querySelectorAll('.edit-btn').forEach((button) => button.addEventListener('click', (event) => {
     event.preventDefault();
@@ -72,24 +84,29 @@ static addBtnEditEvent = () => {
       id = 0;
     }
 
-    const todoList = this.getLocalStorageData();
-    const itemToEdit = todoList[id];
-
-    document.getElementById('todo-input').style.display = 'none';
-    const editInput = document.querySelector('.todo-edit-input');
-    editInput.value = itemToEdit.description;
-    editInput.setAttribute('id', id);
-    document.getElementById('edit-todo-item').style.display = 'block';
-    editInput.focus();
+    this.setUpEdit(id);
   }));
 };
 
-static creatTodoItemsHtml = ({ description, index }) => {
+static addDoubleClickEditEvent = () => {
+  document.querySelectorAll('.item').forEach((item) => item.addEventListener('dblclick', (event) => {
+    event.preventDefault();
+    let id;
+    if (item.id > 0) {
+      id = item.id - 1;
+    } else {
+      id = 0;
+    }
+    this.setUpEdit(id);
+  }));
+};
+
+static creatTodoItemsHtml = ({ description, index }, curstatus, iscompleted) => {
   const div = document.createElement('div');
   div.className = 'todo-item';
   div.innerHTML = `
       <div class="todo_detail">
-      <input type="checkbox" id="" name="" value=""> <h3 class="item">${description}</h3> <i></i>
+      <input type="checkbox" id="${index}" name="" value="" class="checkbox" ${curstatus}> <h3 id="${index}" class="item ${iscompleted}">${description}</h3> <i></i>
       </div>
       <div>
       <button class="edit-btn" id="${index}"><i class="fa-regular fa-pen-to-square"></i></button>
@@ -104,10 +121,23 @@ static showTodoItems = () => {
   const todoList = this.getLocalStorageData();
   document.querySelector('.todo_lists').innerHTML = '';
   todoList.forEach((item) => {
-    document.querySelector('.todo_lists').append(this.creatTodoItemsHtml(item));
+    let curstatus;
+    let iscompleted;
+    if (item.completed === true) {
+      curstatus = 'checked';
+      iscompleted = 'completed';
+    } else {
+      curstatus = '';
+      iscompleted = '';
+    }
+    document.querySelector('.todo_lists').append(this.creatTodoItemsHtml(item, curstatus, iscompleted));
   });
   this.addBtnRemoveEvent();
   this.addBtnEditEvent();
+  this.addDoubleClickEditEvent();
+
+  const event = new Event('listUpdated');
+  document.dispatchEvent(event);
 }
 
 static addTodoTask = (description) => {
