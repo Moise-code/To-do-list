@@ -3,7 +3,7 @@
 - This is a basic website that allows users to add/remove todo's from a list.
 
 ### Link to the live demo
-https://moise-code.github.io/To-do-list/dist/index.html
+https://moise-code.github.io/To-do-list/dist/
 
 ## Built With
 
