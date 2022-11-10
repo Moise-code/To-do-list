@@ -39,4 +39,10 @@ describe('Add new task', () => {
       JSON.stringify([obj]),
     );
   });
+  
+  test('Add new todo task to the UI', () => {
+    const div = document.querySelectorAll('.todo_lists');
+    Utility.addTodoTask('Test the code');
+    expect(div).toHaveLength(1);
+  });
 });
