@@ -45,5 +45,27 @@ describe('Add new task', () => {
     Utility.addTodoTask('Test the code');
     expect(div).toHaveLength(1);
   });
+});
 
+describe('delete list item', () => {
+  beforeEach(() => {
+    localStorage.clear();
+    jest.clearAllMocks();
+    localStorage.setItem.mockClear();
+    document.body.innerHTML = '<div class="todo_lists">'
+        + '<li></li>'
+        + '</div>';
+    const obj = { description: 'Test task', completed: false, index: 1 };
+    Utility.setLocalStorageData([obj]);
+  });
+
+  test('Delete task from local storage', () => {
+    const id = 0;
+
+    Utility.deleteTask(id);
+    const result = Utility.getLocalStorageData();
+    expect(result.length).toBe(0);
+    // eslint-disable-next-line no-underscore-dangle
+    expect(localStorage.__STORE__.todoList).toBe(JSON.stringify([]));
+  });
 });
