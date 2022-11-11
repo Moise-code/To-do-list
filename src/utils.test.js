@@ -94,4 +94,17 @@ describe('Update description', () => {
       .description;
     expect(result).toBe('This is a new task');
   });
+  
+    test('Change the second obj description to - Second description-', () => {
+    // Arrange and Act
+    const id = 1;
+    const updateTaskSpy = jest.spyOn(Utility, 'updateTaskInput');
+    Utility.updateTaskInput('Second description', id);
+
+    // Assert
+    expect(updateTaskSpy).toHaveBeenCalledTimes(1);
+    const result = JSON.parse(window.localStorage.getItem('todoList'))[id];
+    expect(result.description).toBe('Second description');
+    expect(result.completed).toBeTruthy();
+  });
 });
