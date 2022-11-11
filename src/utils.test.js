@@ -94,8 +94,8 @@ describe('Update description', () => {
       .description;
     expect(result).toBe('This is a new task');
   });
-  
-    test('Change the second obj description to - Second description-', () => {
+
+  test('Change the second obj description to - Second description-', () => {
     // Arrange and Act
     const id = 1;
     const updateTaskSpy = jest.spyOn(Utility, 'updateTaskInput');
